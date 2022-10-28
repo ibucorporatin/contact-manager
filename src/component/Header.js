@@ -21,7 +21,7 @@ changetheme()
         <div className='ui  container center 'style={{justifyContent:'center'}}  >
             <h2  >Contact Manager</h2> 
           <div>
-            <h4 className="switch-btn darkName">Dark</h4>
+            <h4 className="switch-btn1 darkName">Dark</h4>
           <button className="switch-btn " name='button' onClick={(e)=>buttonClick(e)}>
         <span>
         </span>

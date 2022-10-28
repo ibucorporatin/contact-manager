@@ -67,9 +67,17 @@ setisDark(!isDark);
 }
 let color='';
  color= isDark&&styling.dark
-  return (
+ let nameClass;
+ if (color==''&&contacts.length==0) {
+  nameClass='white'
+ } else if(color!=''&&contacts.length==0) {
+  nameClass='black'
+ }
 
-     <div className='ui' style={{padding:'10px'}} {...color.app}  >
+  return (
+    
+
+     <div className={nameClass} style={{padding:'10px'}} {...color.app}  >
        
       <buttonContext.Provider value={{contacts,removeContactHandeler,editContactHandeler,color,changetheme}}>
       <Header/>
@@ -79,6 +87,6 @@ let color='';
        
        
     </div>
- 
+    
   )
 }
