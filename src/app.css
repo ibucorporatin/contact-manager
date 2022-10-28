@@ -1,0 +1,68 @@
+.switch-btn1 {
+    position: absolute;
+    bottom: 20%;
+    right: 2%;
+    width: 5%;
+    height: 55%;
+    display: flex;
+    border-radius: 0.5rem;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    transition:  all 0.3s linear;
+    
+  }
+  .switch-btn {
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    width: 5%;
+    height: 55%;
+    display: flex;
+    border-radius: 0.5rem;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    transition:  all 0.3s linear;
+    
+  }
+  .switch-btn span {
+    display: inline-block;
+    font-size: 0.85rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: rgba(70, 154, 154, 0.955);
+  }
+  .switch {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(70, 154, 154, 0.955);
+    border-radius: 0.5rem;
+    margin: 0;
+    display: block;
+    transition: all 0.3s linear;
+  }
+  .slide .switch {
+    left: 50%;
+  }
+  @media only screen and (max-width: 600px) {
+    .switch-btn{
+        bottom: 27%;
+        right: 2%;
+        width: 10%;
+        height: 40%;
+    }
+    .switch-btn1{
+        bottom: 27%;
+        right: 2%;
+        width: 10%;
+        height: 40%;
+    }
+    .darkName{
+       font-size: 12px;
+       background-color: transparent;
+    }
+  }
