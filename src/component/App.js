@@ -19,9 +19,13 @@ export default function App() {
   const LOCAL_STORAGE_KEY="contacts"
   useEffect(() => {
   const retriveContact= JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+  const retriveTheme= JSON.parse(localStorage.getItem('theme'))
   if (retriveContact) {
     setcontacts(retriveContact)
+    
+    setisDark(retriveTheme)
     console.log(retriveContact)
+    console.log(retriveTheme)
   }
 }, []);
 
@@ -32,7 +36,9 @@ useEffect(() => {
   console.log("hello")
   setisEdit(false)
 }, [contacts]);
-
+useEffect(()=>{
+localStorage.setItem('theme',JSON.stringify(isDark))
+},[isDark])
 //  delete data from local storage
 const removeContactHandeler=(id)=>{
 const newContactList=contacts.filter((contact)=>{
@@ -75,13 +81,13 @@ let color='';
  }
 //  console.log(contacts.length<=1)
  console.log(nameClass)
-
+console.log(isDark)
   return (
     
 
      <div className={nameClass} style={{padding:'10px'}} {...color.app}  >
        
-      <buttonContext.Provider value={{contacts,removeContactHandeler,editContactHandeler,color,changetheme}}>
+      <buttonContext.Provider value={{contacts,removeContactHandeler,editContactHandeler,color,changetheme,isDark}}>
       <Header/>
       <AddContacts value={{contacts,setcontacts,isEdit,editContact,styling}} />
         <ContactList />
