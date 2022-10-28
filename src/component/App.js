@@ -68,11 +68,12 @@ setisDark(!isDark);
 let color='';
  color= isDark&&styling.dark
  let nameClass;
- if (color=='') {
+ if (color==''&contacts.length<1) {
   nameClass='white'
- } else  {
+ } else if(color!=''&contacts.length<=1) {
   nameClass='black'
  }
+//  console.log(contacts.length<=1)
  console.log(nameClass)
 
   return (
