@@ -48,11 +48,17 @@
   .slide .switch {
     left: 50%;
   }
-  body{
+   #root .white{
+    background-color: white;
     width: 100%;
-    height: 100%;
+    height: 100vh;
   }
-#root{
+   #root .black{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+  }
+/* #root{
   width: 100%;
   height: 100%;
 }
@@ -66,7 +72,7 @@
   height: 100%;
   width: 100%;
 
-}
+} */
 
   @media only screen and (max-width: 600px) {
     .switch-btn{
